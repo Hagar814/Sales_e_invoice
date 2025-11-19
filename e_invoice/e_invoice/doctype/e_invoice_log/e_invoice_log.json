@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DD./.MM./.YY.-.##",
+ "creation": "2022-10-15 06:35:04.105439",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "last_execution",
+  "process1",
+  "exception_during_process",
+  "column_break_2",
+  "status",
+  "total_count",
+  "section_break_4",
+  "success_count",
+  "column_break_6",
+  "failed_count",
+  "response_section",
+  "response",
+  "section_break_9",
+  "invoices",
+  "doc_under_process",
+  "cancelling"
+ ],
+ "fields": [
+  {
+   "fieldname": "last_execution",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Last Execution"
+  },
+  {
+   "fieldname": "process1",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Process",
+   "options": "\nEinvoice Bulk Send\nEinvoice Bulk Cancel\nEinvoice Bulk Credit\nEinvoice Bulk Validate"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nNot Started\nStarted\nCancelled\nError Occured\nPartial Success\nPartial Failed\nAll Success\nAll Failed"
+  },
+  {
+   "fieldname": "total_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Count"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "success_count",
+   "fieldtype": "Int",
+   "label": "Success Count"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "failed_count",
+   "fieldtype": "Int",
+   "label": "Failed Count"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "response_section",
+   "fieldtype": "Section Break",
+   "label": "Response"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "invoices",
+   "fieldtype": "Table",
+   "label": "Invoices",
+   "options": "E Invoice Log Invoices"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "Long Text"
+  },
+  {
+   "default": "0",
+   "fieldname": "doc_under_process",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Doc under Process"
+  },
+  {
+   "fieldname": "exception_during_process",
+   "fieldtype": "Long Text",
+   "label": "Error Occured on Process"
+  },
+  {
+   "default": "0",
+   "fieldname": "cancelling",
+   "fieldtype": "Check",
+   "label": "Cancelling"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-22 11:06:33.322380",
+ "modified_by": "Administrator",
+ "module": "E Invoice",
+ "name": "E Invoice Log",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "E-invoice",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
