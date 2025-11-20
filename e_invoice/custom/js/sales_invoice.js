@@ -162,7 +162,6 @@ frappe.ui.form.on('Sales Invoice', {
             cur_frm.page.set_inner_btn_group_as_primary(__('E-Invoice'));
         },
    before_save: function(frm) {
-       console.log("hi")
     
 
        // 1️⃣ Fetch customer fields
